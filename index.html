@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ananthika D. — B.Tech Computer Science and Design graduate interested in AI, machine learning, Python and UI/UX.">
+<meta name="theme-color" content="#100722">
+<title>Ananthika D. | AI/ML & UI/UX Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{--bg:#090512;--surface:#120a23;--surface2:#1a1030;--purple:#9635ff;--purple2:#b36cff;--text:#fff;--muted:#c4bbd2;--line:rgba(255,255,255,.1);--green:#86e4c1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:Poppins,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.7}
+body:before{content:"";position:fixed;width:520px;height:520px;left:-180px;top:-180px;background:var(--purple);filter:blur(210px);opacity:.17;z-index:-1;pointer-events:none}
+body:after{content:"";position:fixed;width:500px;height:500px;right:-180px;bottom:-180px;background:#6723c5;filter:blur(210px);opacity:.14;z-index:-1;pointer-events:none}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,90%);margin:auto}
+header{position:fixed;z-index:1000;top:0;left:0;width:100%;background:rgba(9,5,18,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:35px;font-weight:800;letter-spacing:-2px}.logo span{color:var(--purple)}
+nav{display:flex;align-items:center;gap:24px}
+nav a{font-size:12px;letter-spacing:1px;color:var(--muted);font-weight:600;transition:.2s}
+nav a:hover{color:var(--purple2)}
+.talk{border:1px solid var(--purple);border-radius:12px;padding:11px 18px;font-size:13px;font-weight:600}
+.talk:hover{background:var(--purple)}
+.menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:9px;padding:9px 12px;font-size:19px}
+section{padding:105px 0}
+.hero{min-height:100vh;padding-top:145px;display:grid;grid-template-columns:1.1fr .8fr .75fr;align-items:center;gap:32px}
+.eyebrow,.section-kicker{color:var(--purple2);font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase}
+.hero h1{font-size:clamp(48px,6vw,76px);line-height:1.08;letter-spacing:-3px;margin:22px 0}
+.hero h1 span{color:var(--purple)}
+.hero h3{font-size:clamp(18px,2vw,25px);line-height:1.4;margin-bottom:18px}
+.hero .desc{color:var(--muted);font-size:15px;line-height:1.9;max-width:550px}
+.buttons{display:flex;gap:13px;flex-wrap:wrap;margin:28px 0 35px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border-radius:12px;font-weight:600;font-size:14px;border:1px solid var(--purple);transition:.25s}
+.btn.primary{background:var(--purple);border-color:var(--purple)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px #9635ff35}
+.stats{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.stat strong{font-size:35px;display:block;line-height:1.2}.stat span{color:var(--muted);font-size:13px;letter-spacing:1px}
+.stat-divider{height:44px;width:1px;background:var(--line)}
+.hero-photo{position:relative;display:grid;place-items:center;min-height:400px}
+.hero-photo .halo{position:absolute;width:min(360px,90%);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#9635ff,#47178c);box-shadow:0 0 90px #9635ff45}
+.hero-photo img{position:relative;width:min(340px,90%);max-height:420px;object-fit:contain;z-index:1;filter:drop-shadow(0 15px 30px #0008)}
+.availability{background:linear-gradient(145deg,#170d2b,#10091d);border:1px solid var(--line);border-radius:22px;padding:25px}
+.availability small{color:var(--muted);letter-spacing:2px}
+.availability h2{font-size:32px;margin:8px 0 16px}
+.purple-line{height:3px;width:58px;background:var(--purple);margin-bottom:22px}
+.service{display:flex;gap:12px;align-items:center;color:#e4ddec;margin:13px 0;font-size:14px}
+.service i{color:var(--purple2);width:18px}
+.quote{margin-top:30px;padding-left:16px;border-left:2px solid var(--purple);color:var(--muted);font-size:13px}
+.section-head{margin-bottom:38px}
+.section-head h2{font-size:clamp(32px,4vw,48px);letter-spacing:-1.5px;margin-top:8px}
+.section-head p.sub{color:var(--muted);margin-top:8px;max-width:700px}
+.about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:55px;align-items:center}
+.about-image{border-radius:24px;overflow:hidden;border:1px solid var(--line);background:var(--surface);max-width:360px}
+.about-image img{width:100%;display:block}
+.about-copy h3{font-size:27px;line-height:1.35;margin-bottom:16px}
+.about-copy p{color:var(--muted);margin-bottom:15px}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:25px}
+.info{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:13px}
+.info b{color:var(--purple2);margin-right:6px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:linear-gradient(145deg,#160d27,#10091d);border:1px solid var(--line);border-radius:20px;padding:25px;transition:.25s}
+.card:hover{transform:translateY(-6px);border-color:#9635ff88;box-shadow:0 16px 35px #0005}
+.skill-card i{font-size:30px;color:var(--purple2);margin-bottom:15px}
+.card h3{font-size:19px;margin-bottom:12px}
+.card p{color:var(--muted);font-size:13px;line-height:1.8}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}
+.pill{font-size:11px;padding:6px 10px;border:1px solid #9635ff77;border-radius:30px;color:#e5d4ff;background:#9635ff10}
+.project-card{padding:0;overflow:hidden}
+.project-card img{width:100%;height:190px;object-fit:cover;background:#211335;display:block}.project-placeholder{height:190px;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#51218a,#1a0d2d 70%);color:#d9baff;font-size:52px}
+.project-body{padding:22px}
+.project-type{font-size:10px;letter-spacing:2px;color:var(--purple2);font-weight:700}
+.project-body h3{margin:8px 0 10px}
+.project-body p{margin-bottom:15px}
+.project-link{display:inline-flex;align-items:center;gap:8px;color:var(--purple2);font-weight:600;font-size:13px;margin-top:16px}
+.timeline{border-left:2px solid #64329a;padding-left:26px;margin-left:10px}
+.timeline-item{position:relative;padding:0 0 30px}
+.timeline-item:before{content:"";position:absolute;left:-34px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--purple);box-shadow:0 0 0 5px #9635ff25}
+.timeline-item .date{color:var(--purple2);font-size:12px;font-weight:600;letter-spacing:1px}
+.timeline-item h3{font-size:20px;margin:5px 0}
+.timeline-item p{color:var(--muted);font-size:14px}
+.contact-panel{background:linear-gradient(120deg,#1b0c31,#10091c);border:1px solid #9635ff66;border-radius:24px;padding:38px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.contact-panel p{color:var(--muted);margin-top:8px}
+.socials{display:flex;gap:12px;flex-wrap:wrap}
+.socials a{width:46px;height:46px;display:grid;place-items:center;border:1px solid #9635ff88;border-radius:50%;transition:.2s}
+.socials a:hover{background:var(--purple);transform:translateY(-3px)}
+footer{text-align:center;padding:28px 0 38px;color:#92879f;border-top:1px solid var(--line);font-size:12px}
+@media(max-width:1000px){.hero{grid-template-columns:1fr 1fr}.availability{grid-column:1/-1}.hero-photo{grid-column:2;grid-row:1}.hero>div:first-child{grid-column:1;grid-row:1}.cards{grid-template-columns:repeat(2,1fr)}nav{gap:12px}nav a{font-size:10px}}
+@media(max-width:720px){.nav{height:70px}.logo{font-size:30px}.menu{display:block}.talk{display:none}nav{display:none;position:absolute;top:70px;left:0;right:0;background:#10091d;padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}nav a{font-size:13px}.hero{display:flex;flex-direction:column;align-items:stretch;text-align:center;padding-top:115px;gap:25px}.hero-photo{order:-1;min-height:230px}.hero-photo .halo{width:220px}.hero-photo img{width:210px;max-height:250px}.hero h1{font-size:54px}.hero .desc{margin:auto}.buttons{flex-direction:column}.stats{justify-content:center}.availability{text-align:left}.about-grid{grid-template-columns:1fr;gap:25px}.about-image{max-width:260px;margin:auto}.cards{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}.contact-panel{padding:25px;flex-direction:column;align-items:flex-start}.section-head h2{font-size:34px}section{padding:75px 0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#home">AD<span>.</span></a>
+    <button class="menu" id="menuBtn" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+    <nav id="nav">
+      <a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#skills">SKILLS</a><a href="#projects">PROJECTS</a><a href="#education">EDUCATION</a><a href="#experience">EXPERIENCE</a><a href="#contact">CONTACT</a>
+    </nav>
+    <a class="talk" href="#contact">LET'S TALK ↗</a>
+  </div>
+</header>
+
+<main>
+<section class="hero wrap" id="home">
+  <div>
+    <p class="eyebrow">● Hello, I'm</p>
+    <h1>Ananthika<br><span>D.</span></h1>
+    <h3>AI/ML Enthusiast | Python Developer<br>UI/UX Designer</h3>
+    <p class="desc">B.Tech Computer Science &amp; Design graduate interested in Artificial Intelligence, Machine Learning, Deep Learning and NLP. I enjoy building practical projects and creating thoughtful digital experiences.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">VIEW MY PROJECTS <i class="fa-solid fa-arrow-right"></i></a>
+      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">VIEW / DOWNLOAD CV <i class="fa-solid fa-download"></i></a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>03+</strong><span>PROJECTS</span></div><div class="stat-divider"></div>
+      <div class="stat"><strong>01</strong><span>INTERNSHIP</span></div><div class="stat-divider"></div>
+      <div class="stat"><strong>10+</strong><span>TECHNICAL SKILLS</span></div>
+    </div>
+  </div>
+  <div class="hero-photo"><div class="halo"></div><img src="ananthika.png" alt="Ananthika D."></div>
+  <aside class="availability">
+    <small>CAREER INTERESTS</small><h2>AI &amp; Design</h2><div class="purple-line"></div>
+    <div class="service"><i class="fa-solid fa-brain"></i> Machine Learning</div>
+    <div class="service"><i class="fa-solid fa-code"></i> Python Development</div>
+    <div class="service"><i class="fa-solid fa-comments"></i> NLP &amp; Deep Learning</div>
+    <div class="service"><i class="fa-solid fa-pen-ruler"></i> UI/UX Design</div>
+    <div class="quote">“Learning by building, improving through practice.”</div>
+  </aside>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head"><p class="section-kicker">● About me</p><h2>Curious mind. Practical builder.</h2></div>
+    <div class="about-grid">
+      <div class="about-image"><img src="ananthika.png" alt="Ananthika"></div>
+      <div class="about-copy">
+        <h3>Computer Science &amp; Design Graduate with an interest in AI/ML</h3>
+        <p>I'm Ananthika D., a B.Tech graduate in Computer Science and Design from Vimal Jyothi Engineering College, Kannur. My main technical interests are Python, Machine Learning, Deep Learning, NLP and data analytics.</p>
+        <p>Through academic work, training and hands-on projects, I have practised data preprocessing, model building and evaluation, computer vision, NLP workflows and UI/UX prototyping. I am looking for an opportunity to learn, contribute and grow as a technology professional.</p>
+        <div class="info-grid">
+          <div class="info"><b>Name:</b> Ananthika D.</div><div class="info"><b>Email:</b> ananthikadtk611@gmail.com</div>
+          <div class="info"><b>Location:</b> Kannur, Kerala</div><div class="info"><b>Degree:</b> B.Tech CSD</div>
+          <div class="info"><b>CGPA:</b> 6.99 / 10</div><div class="info"><b>Focus:</b> AI/ML &amp; UI/UX</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head"><p class="section-kicker">● My toolkit</p><h2>Skills &amp; Technologies</h2><p class="sub">Tools and concepts I have studied and practised through coursework and projects.</p></div>
+    <div class="cards">
+      <article class="card skill-card"><i class="fa-brands fa-python"></i><h3>Programming &amp; Data</h3><p>Python, SQL, Java, NumPy, Pandas and data handling.</p><div class="pills"><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Java</span><span class="pill">NumPy</span><span class="pill">Pandas</span></div></article>
+      <article class="card skill-card"><i class="fa-solid fa-brain"></i><h3>Machine Learning</h3><p>Supervised learning, preprocessing, feature engineering, model evaluation and tuning.</p><div class="pills"><span class="pill">Scikit-learn</span><span class="pill">Regression</span><span class="pill">Classification</span><span class="pill">XGBoost</span></div></article>
+      <article class="card skill-card"><i class="fa-solid fa-network-wired"></i><h3>Deep Learning</h3><p>Neural networks, CNNs, transfer learning and model training.</p><div class="pills"><span class="pill">TensorFlow</span><span class="pill">Keras</span><span class="pill">PyTorch</span><span class="pill">CNN</span></div></article>
+      <article class="card skill-card"><i class="fa-solid fa-language"></i><h3>NLP &amp; Computer Vision</h3><p>Text preprocessing, classification, image processing and object detection practice.</p><div class="pills"><span class="pill">NLP</span><span class="pill">OpenCV</span><span class="pill">TF-IDF</span><span class="pill">YOLO basics</span></div></article>
+      <article class="card skill-card"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Development Tools</h3><p>Building and testing small applications and sharing work through version control.</p><div class="pills"><span class="pill">GitHub</span><span class="pill">Google Colab</span><span class="pill">Streamlit</span><span class="pill">FastAPI</span></div></article>
+      <article class="card skill-card"><i class="fa-solid fa-pen-ruler"></i><h3>UI/UX &amp; Design</h3><p>Designing interfaces, wireframes and interactive prototypes.</p><div class="pills"><span class="pill">Figma</span><span class="pill">Wireframing</span><span class="pill">Prototyping</span><span class="pill">Unity3D</span><span class="pill">C#</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head"><p class="section-kicker">● Featured work</p><h2>Projects &amp; Practice</h2><p class="sub">A selection of academic, AI/ML and design work. Open the repositories to explore the code and notebooks.</p></div>
+    <div class="cards">
+      <article class="card project-card"><img src="petcare-dashboard.jpeg" alt="Animal behaviour detection project"><div class="project-body"><span class="project-type">FINAL YEAR PROJECT · AI SYSTEM</span><h3>Animal Behaviour &amp; Emotion Detection</h3><p>An AI-based project exploring animal behaviour and emotion detection using audio and video analysis with machine learning and computer vision techniques.</p><div class="pills"><span class="pill">Python</span><span class="pill">TensorFlow</span><span class="pill">OpenCV</span><span class="pill">ML</span></div><a class="project-link" href="https://github.com/ananthika123/Animal-Emotion-and-Behaviour-Detection" target="_blank" rel="noopener">VIEW GITHUB <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></article>
+      <article class="card project-card"><img src="fps-gameplay.jpeg" alt="FPS survival game screenshot"><div class="project-body"><span class="project-type">GAME DEVELOPMENT</span><h3>FPS Survival Game</h3><p>A 3D first-person survival game developed using Unity3D and C#, with player movement, shooting, health systems and enemy AI.</p><div class="pills"><span class="pill">Unity3D</span><span class="pill">C#</span><span class="pill">Game AI</span></div><a class="project-link" href="https://github.com/ananthika123" target="_blank" rel="noopener">EXPLORE GITHUB <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></article>
+      <article class="card project-card"><img src="portfolio-ui.jpeg" alt="Dashboard user interface design"><div class="project-body"><span class="project-type">UI/UX DESIGN</span><h3>Dashboard UI Design</h3><p>Responsive dashboard interface design work using Figma, including wireframes, user flows and interactive prototypes.</p><div class="pills"><span class="pill">Figma</span><span class="pill">UI/UX</span><span class="pill">Prototyping</span></div><a class="project-link" href="https://github.com/ananthika123/Figma-Dashboard-Project" target="_blank" rel="noopener">VIEW GITHUB <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></article>
+      <article class="card project-card"><div class="project-placeholder" aria-label="NLP project"><i class="fa-solid fa-language"></i></div><div class="project-body"><span class="project-type">NLP · CLASSIFICATION</span><h3>DonorsChoose Text Classification</h3><p>Academic NLP work using text preprocessing and TF-IDF with classical machine-learning models and a neural-network approach.</p><div class="pills"><span class="pill">NLP</span><span class="pill">TF-IDF</span><span class="pill">Scikit-learn</span><span class="pill">Keras</span></div><a class="project-link" href="https://github.com/ananthika123/AI-ML-ICT-Academy" target="_blank" rel="noopener">VIEW COURSEWORK <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></article>
+      <article class="card project-card"><div class="project-placeholder" aria-label="Machine learning project"><i class="fa-solid fa-heart-pulse"></i></div><div class="project-body"><span class="project-type">SUPERVISED LEARNING</span><h3>Heart Disease Prediction Study</h3><p>Classification practice using a heart-disease dataset, including preprocessing, model training and evaluation with classification metrics.</p><div class="pills"><span class="pill">Python</span><span class="pill">SVM</span><span class="pill">Random Forest</span><span class="pill">XGBoost</span></div><a class="project-link" href="https://github.com/ananthika123/AI-ML-ICT-Academy" target="_blank" rel="noopener">VIEW COURSEWORK <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head"><p class="section-kicker">● Education</p><h2>Academic Background</h2></div>
+    <div class="timeline">
+      <div class="timeline-item"><span class="date">2022 – 2026</span><h3>B.Tech — Computer Science &amp; Design</h3><p>Vimal Jyothi Engineering College, Kannur<br>CGPA: 6.99 / 10</p></div>
+      <div class="timeline-item"><span class="date">2020 – 2022</span><h3>Higher Secondary — Science</h3><p>GHSS Sreepuram, Manakadavu<br>Score: 83.33%</p></div>
+      <div class="timeline-item"><span class="date">2019 – 2020</span><h3>High School (KBPE)</h3><p>GHSS Sreepuram, Manakadavu<br>Score: 95.56%</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head"><p class="section-kicker">● Experience & learning</p><h2>Internship & Professional Development</h2></div>
+    <div class="timeline">
+      <div class="timeline-item"><span class="date">APR 2025 – JUN 2025</span><h3>UI/UX Design Intern — Proxenix</h3><p>Worked on responsive wireframes and interactive Figma prototypes for client projects. Collaborated with developers and QA teams as part of project workflows.</p></div>
+      <div class="timeline-item"><span class="date">AI / ML COURSEWORK</span><h3>AI &amp; Machine Learning Training — ICT Academy of Kerala</h3><p>Hands-on learning in Python, data preprocessing, supervised learning, deep learning, NLP, model evaluation and project development.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-panel">
+      <div><p class="section-kicker">● Contact</p><h2>Let's connect and build something useful.</h2><p>Open to entry-level opportunities, internships and collaborative projects in AI/ML and related technology roles.</p><div class="buttons" style="margin-bottom:0"><a class="btn primary" href="mailto:ananthikadtk611@gmail.com">EMAIL ME <i class="fa-solid fa-paper-plane"></i></a><a class="btn" href="resume.pdf" target="_blank" rel="noopener">VIEW RESUME <i class="fa-solid fa-file-pdf"></i></a></div></div>
+      <div class="socials"><a href="https://github.com/ananthika123" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/in/ananthika-d-5439ba255" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="mailto:ananthikadtk611@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>© <span id="year"></span> Ananthika D. · AI/ML &amp; UI/UX Portfolio</footer>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
